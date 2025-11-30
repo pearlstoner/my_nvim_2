@@ -5,10 +5,11 @@ return {
     local configs = require("nvim-treesitter.configs")
 
     configs.setup({
-      ensure_installed = { "c", "lua", "vim", "vimdoc", "typescript", "javascript", "tsx", "html", "css", "go", "markdown", "cpp", "python", "java"},
+      ensure_installed = { "c", "lua", "vim", "vimdoc", "typescript", "javascript", "tsx", "html", "css", "go", "markdown", "odin", "cpp", "python", "java", "zig"},
       sync_install = false,
       highlight = {
         enable = true,
+        use_languagetree = true,
         -- Or use a function for more flexibility, e.g. to disable slow treesitter highlight for large files
         disable = function(lang, buf)
           local max_filesize = 100 * 1024 -- 100 KB

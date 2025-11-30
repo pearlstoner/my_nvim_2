@@ -17,8 +17,8 @@ return {
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
       vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
       vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, opts)
-      vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-      vim.keymap.set("n", "<leader>df", vim.diagnostic.goto_next, opts)
+    vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+      vim.keymap.set("n", "<leader>df", vimopts)
       vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev, opts)
       vim.keymap.set("n", "<leader>dl", "<cmd>Telescope diagnostics<cr>", opts)
       vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, opts)
@@ -62,6 +62,8 @@ return {
       "pyright",
       "ts_ls",
       "jdtls",
+      "ols",
+      "zig",
     })
 
   end,
