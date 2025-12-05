@@ -257,7 +257,7 @@ return {
 			"gopls",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
-		require("lspconfig").lua_ls.setup({
+		vim.lsp.config("lua_ls", {
 			settings = {
 				Lua = {
 					diagnostics = {
