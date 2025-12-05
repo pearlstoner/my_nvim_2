@@ -210,6 +210,7 @@ return {
 			pyright = {},
 			ols = {},
 			rust_analyzer = {},
+			zls = {},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			--
 			-- Some languages (like typescript) have entire language plugins that can be useful:
@@ -253,8 +254,22 @@ return {
 			"stylua", -- Used to format Lua code
 			"prettierd", -- Used to format javascript and typescript code
 			"ols",
+			"gopls",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
+		require("lspconfig").lua_ls.setup({
+			settings = {
+				Lua = {
+					diagnostics = {
+						globals = { "vim" }, -- Add 'vim' here
+					},
+					-- Optional: Include Neovim runtime for better API completion
+					workspace = {
+						library = vim.api.nvim_get_runtime_file("", true),
+					},
+				},
+			},
+		})
 
 		require("mason-lspconfig").setup({
 			ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
