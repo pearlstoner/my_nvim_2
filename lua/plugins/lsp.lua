@@ -254,11 +254,11 @@ return {
 			"stylua", -- Used to format Lua code
 			"prettierd", -- Used to format javascript and typescript code
 			"ols",
-            "rust_analyzer",
-            "jsonls",
-            "html",
-            "clangd",
-            "svelte",
+			"rust_analyzer",
+			"jsonls",
+			"html",
+			"clangd",
+			"svelte",
 			"gopls",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })

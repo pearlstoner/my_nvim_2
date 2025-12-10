@@ -14,6 +14,13 @@ return {
 			desc = "Find Files in project directory",
 		},
 		{
+			"<leader>fb",
+			function()
+				require("fzf-lua").buffers()
+			end,
+			desc = "Find buffers",
+		},
+		{
 			"<leader>fg",
 			function()
 				require("fzf-lua").live_grep()
@@ -42,7 +49,7 @@ return {
 			desc = "[F]ind [K]eymaps",
 		},
 		{
-			"<leader>fb",
+			"<leader>fB",
 			function()
 				require("fzf-lua").builtin()
 			end,
